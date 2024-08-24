@@ -1,0 +1,113 @@
+/* フォント
+下記の順で指定します。
+Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif
+
+コンテンツ幅
+全幅表示です。
+
+メインビジュアル
+全幅表示で、高さはブラウザの高さに合わせます。
+画像の横並び
+3枚の画像を均等に配置して全幅で表示します。
+高さは500px固定で、画面サイズに合わせて画像が拡大、縮小します。
+
+フッター
+SNSのリンクを横並びで中央に配置します。
+
+レスポンシブ
+ブレークポイントは834pxです。
+スマホ表示は、３枚の画像を縦に並べます。 */
+
+html{
+  font-size:100%;
+}
+body{
+  font-family: Helvetica Neue, Arial, Hiragino Sans, Meiryo, sans-serif;
+  background-color: #ffffff;
+  color:#000000;
+   font-size:1rem; 
+   margin:0;
+}
+li{
+  list-style: none;
+}
+.header img{
+width: 100%;
+ height:100vh;
+ object-fit:cover;
+ object-position: top;
+
+}
+.index{
+  text-align: center;
+  margin-bottom:70px;
+}
+.index .section-title{
+  margin-bottom:50px;
+  margin-top:50px;
+  font-size:2rem;
+}
+.index text{
+  margin-bottom:30px;
+}
+
+.text-picture {
+ display: flex;
+ padding-left:0;
+ margin-bottom:50px;
+}
+.text-picture li{
+  width:calc(100%/3);
+}
+.text-picture li img{
+  width:100%;
+  height:500px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.link{
+text-align: center;
+}
+.link a{
+  display: inline-block;
+  color:#000000;
+  text-decoration: none;
+  border:solid 1px #000000;
+  padding:15px 60px;
+  font-size:0.85rem;
+  margin-bottom:50px;
+}
+
+.footer{
+  font-size: 0.75rem;
+}
+.footer-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom:20px;
+  padding-left:0;
+}
+.footer-link li{
+margin:0 10px;
+}
+.footer-link a{
+  color:#000000;
+}
+
+.footer p{
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 834px) {
+
+  .text-picture {
+    flex-direction: column;
+  }
+  .text-picture li{
+    width:100%;
+  }
+  
+}
+

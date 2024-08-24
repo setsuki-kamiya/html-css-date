@@ -1,0 +1,143 @@
+/* コンテンツ幅
+コンテンツの横幅は960pxで横のパディングは4%です。
+メインビジュアルだけ全幅にします。
+
+メインビジュアル
+全幅で高さは600px固定です。
+
+About
+画像をCSSで丸く切り抜きます。
+画像とテキストを横並びの中央寄せで配置します。
+
+Bicycle
+画像を両端ぞろえの横ならびに配置します。
+
+レスポンシブ
+ブレークポイントは600pxです。
+About、Bicycleともに、レスポンシブ時はコンテンツを縦積みにします。 */
+
+html{
+  font-size:100%;
+}
+body{
+  color:#696969;
+  font-size:1rem;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+}
+li{
+  list-style: none;
+}
+.profile-title{
+  width:120px;
+  line-height: 1px;
+  padding:10px 0;
+}
+.profile-title a{
+  display: block;
+}
+.section-title{
+  display: inline-block;
+  font-size:2rem;
+  text-align: center;
+  margin-bottom:60px;
+  border-bottom:solid 1px #696969;
+}
+h3{
+  font-size:1rem;
+  margin:10px 0;
+}
+
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/* ヘッダー */
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 auto;
+}
+#header ul{
+  display: flex;
+  padding:10px 0;
+}
+#header li{
+  margin-left:30px;
+}
+#header li a{
+  color:#696969;
+}
+
+/* メイン */
+#mainvisual{
+  margin-bottom: 80px;
+}
+#mainvisual img{
+  width:100%;
+  max-width:1900px;
+  height:600px;
+  object-fit: cover;
+}
+
+/* About */
+#about .profile-picture{
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#about img{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  margin-right:30px;
+}
+#about .text{
+  text-align: left;
+}
+
+/* bibycle */
+#bibycle ul{
+  display:flex;
+  justify-content:space-between;
+}
+#bibycle li{
+  width:30%;
+}
+
+/* フッター */
+.footer{
+  text-align: center;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:600px){
+  
+  #mainvisual{
+    height:calc(100vh-60px);
+  }
+
+  #about .profile-picture{
+    flex-direction: column;
+  }
+
+  #about img{
+    margin-right:0;
+  }
+
+  #bibycle ul{
+    flex-direction: column;
+  }
+  #bibycle li{
+    width:100%;
+    margin-bottom:30px;
+  }
+}

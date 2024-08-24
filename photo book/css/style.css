@@ -1,0 +1,151 @@
+/* コンテンツ幅
+メインビジュアルが1000px、中のコンテンツが600pxです。
+
+INDEX
+白背景にします。
+
+DETAIL
+画像とテキストを横並びに配置します。
+著者、出版社、発行年のエリアの上下には罫線を引きます。
+
+レスポンシブ
+ブレークポイントは1024pxです。
+DETAILのコンテンツは縦積みにします。 */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #eaf4fc;
+  color: #2b2b2b;
+  font-size: 0.875rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+
+/* ヘッダー */
+.header {
+  margin-top: 47px;
+}
+
+.header .logo {
+  width: 160px;
+  margin-bottom: 5px;
+}
+
+/* メイン */
+.mainvisual {
+  margin-bottom: 75px;
+}
+
+/* index */
+.index {
+  margin: 60px 0;
+  padding: 20px 0;
+  background-color: #ffffff;
+}
+
+.index .index-article {
+  margin-left: 20px;
+  padding-left:0;
+  margin-top:0;
+}
+
+.index .index-article li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+/* detail */
+.detail {
+  margin-bottom: 150px;
+}
+
+.detail-content {
+  display: flex;
+}
+
+.detail-content .img {
+  width: 250px;
+}
+
+.detail-content .index-text {
+  padding-left: 70px;
+  padding-right: 20px;
+}
+
+.detail-content .index-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.detail-content .index-text dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: solid 1px #dcdddd;
+  border-bottom: solid 1px #dcdddd;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.detail-content .index-text dt {
+  width: 30%;
+  padding-bottom: 3px;
+}
+
+.detail-content .index-text dd {
+  width: 70%;
+  padding-bottom: 3px;
+  margin-left: 0;
+}
+.detail .index-text a{
+  color:#2b2b2b;
+}
+
+/* footer */
+footer .inner {
+  font-size: 0.65rem;
+  margin-bottom: 5px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+  
+  .inner{
+    padding:0 40px;
+  }
+  .img{
+    max-width:100%;
+  }
+  /* header */
+  .header .logo{
+  width:420px;
+  margin:100px 0 40px 0;
+  }
+  
+  .mainvisual{
+    padding:0 10px;
+  }
+  .detail .detail-content{
+    flex-direction: column;
+  }
+}
